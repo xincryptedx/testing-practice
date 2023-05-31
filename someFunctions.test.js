@@ -117,4 +117,22 @@ describe("caesarCipher", () => {
   test("other characters shouldn't be affected", () => {
     expect(someFunctions().caesarCipher("x!y#z$", 2)).toBe("z!a#b$");
   });
+
+  test("negative values for shift also work", () => {
+    expect(someFunctions().caesarCipher("efg", -2)).toBe("cde");
+  });
+
+  // Edge cases
+  test("high values for shift work", () => {
+    expect(someFunctions().caesarCipher("xyz", 2602)).toBe("zab");
+  });
+
+  // Errors
+  test("passing float for shift will trim the decimal value", () => {
+    expect(someFunctions().caesarCipher("efg", 2.999999999)).toBe("ghi");
+  });
+
+  test("passing string for shift will return undefined", () => {
+    expect(someFunctions().caesarCipher("efg", "2")).toBeUndefined();
+  });
 });
