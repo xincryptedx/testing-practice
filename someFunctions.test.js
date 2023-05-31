@@ -103,6 +103,6 @@ describe("calculator", () => {
 describe("caesarCipher", () => {
   // Functionality
   test("passed string returned shifted by shift factor", () => {
-    expect(someFunctions().caeserCipher("abcd", 2)).toBe("cdef");
+    expect(someFunctions().caesarCipher("abcd", 2)).toBe("cdef");
   });
 });

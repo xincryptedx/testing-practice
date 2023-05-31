@@ -62,12 +62,12 @@ const someFunctions = () => {
     return { add, subtract, divide, multiply };
   };
 
-  const caeserCipher = (string, shift) => {
+  const caesarCipher = (string, shift) => {
     // Creat a copy of the string as an array
     const strArray = string.split("");
   };
 
-  return { capitalize, reverseString, calculator, caeserCipher };
+  return { capitalize, reverseString, calculator, caesarCipher };
 };
 
 export default someFunctions;
