@@ -2,7 +2,9 @@
 const someFunctions = () => {
   // Take a string and capitalize the first letter. Must be passed a string.
   const capitalize = (string) => {
-    // Return undefined if string falsy or not string
+    // Return empty string if passed one
+    if (string === "") return "";
+    // Return undefined if string otherwise falsy
     if (!string) return undefined;
     if (typeof string !== "string") return undefined;
     // Create a string to return using the passed string and trim it

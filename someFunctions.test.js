@@ -11,6 +11,10 @@ test("passing string with spaces should work", () => {
   expect(someFunctions().capitalize(" string")).toBe("String");
 });
 
+test("passing empty string should return empty string", () => {
+  expect(someFunctions().capitalize("")).toBe("");
+});
+
 test("passing undefined returns undefined", () => {
   expect(someFunctions().capitalize(undefined)).toBeUndefined();
 });
