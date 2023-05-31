@@ -63,6 +63,8 @@ const someFunctions = () => {
   };
 
   const caesarCipher = (string, shift) => {
+    // Validate params
+    if (typeof shift !== "number" || Number.isNaN(shift)) return undefined;
     // Creat a copy of the string as an array
     const strArray = string.split("");
     // Create result to build and return
