@@ -63,3 +63,10 @@ describe("reverseString", () => {
     expect(someFunctions().reverseString(57)).toBeUndefined();
   });
 });
+
+describe("calculator", () => {
+  // Functionality
+  test("add should correctly add two numbers", () => {
+    expect(someFunctions().calculator().add(2, 2)).toBe(4);
+  });
+});
