@@ -29,7 +29,14 @@ const someFunctions = () => {
     return reversedString;
   };
 
-  return { capitalize, reverseString };
+  // Basic calculator
+  const calculator = () => {
+    const add = (num1, num2) => num1 + num2;
+
+    return { add };
+  };
+
+  return { capitalize, reverseString, calculator };
 };
 
 export default someFunctions;
