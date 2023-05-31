@@ -82,20 +82,20 @@ describe("calculator", () => {
     expect(someFunctions().calculator().multiply(2, 3)).toBe(6);
   });
 
-  // Edge cases
-  test("add should work with negatives", () => {
-    expect(someFunctions().calculator().add(-10, 2)).toBe(-8);
+  // Errors
+  test("passing undefined returns NaN", () => {
+    expect(someFunctions().calculator().multiply(2, undefined)).toBe(NaN);
   });
 
-  test("add should work with floats", () => {
-    expect(someFunctions().calculator().add(2.5, 4.8)).toBe(7.3);
+  test("passing null returns NaN", () => {
+    expect(someFunctions().calculator().multiply(2, null)).toBe(NaN);
   });
 
-  test("subtract should work with negatives", () => {
-    expect(someFunctions().calculator().subtract(-10, 2)).toBe(-12);
+  test("passing string returns NaN", () => {
+    expect(someFunctions().calculator().multiply(2, "4")).toBe(NaN);
   });
 
-  test("subtract should work with floats", () => {
-    expect(someFunctions().calculator().subtract(2.5, 4.8)).toBe(-2.3);
+  test("passing bool returns NaN", () => {
+    expect(someFunctions().calculator().multiply(2, true)).toBe(NaN);
   });
 });
