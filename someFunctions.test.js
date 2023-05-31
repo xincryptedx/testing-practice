@@ -81,4 +81,21 @@ describe("calculator", () => {
   test("multiply should correctly multiply two numbers", () => {
     expect(someFunctions().calculator().multiply(2, 3)).toBe(6);
   });
+
+  // Edge cases
+  test("add should work with negatives", () => {
+    expect(someFunctions().calculator().add(-10, 2)).toBe(-8);
+  });
+
+  test("add should work with floats", () => {
+    expect(someFunctions().calculator().add(2.5, 4.8)).toBe(7.3);
+  });
+
+  test("subtract should work with negatives", () => {
+    expect(someFunctions().calculator().subtract(-10, 2)).toBe(-12);
+  });
+
+  test("subtract should work with floats", () => {
+    expect(someFunctions().calculator().subtract(2.5, 4.8)).toBe(-2.3);
+  });
 });

@@ -31,10 +31,33 @@ const someFunctions = () => {
 
   // Basic calculator
   const calculator = () => {
-    const add = (num1, num2) => num1 + num2;
-    const subtract = (num1, num2) => num1 - num2;
-    const divide = (num1, num2) => num1 / num2;
-    const multiply = (num1, num2) => num1 * num2;
+    const verifyNums = (num1, num2) => {
+      if (
+        typeof num1 === "number" &&
+        !Number.isNaN(num1) &&
+        typeof num2 === "number" &&
+        !Number.isNaN(num2)
+      ) {
+        return true;
+      }
+      return false;
+    };
+    const add = (num1, num2) => {
+      if (verifyNums(num1, num2)) return num1 + num2;
+      return NaN;
+    };
+    const subtract = (num1, num2) => {
+      if (verifyNums(num1, num2)) return num1 - num2;
+      return NaN;
+    };
+    const divide = (num1, num2) => {
+      if (verifyNums(num1, num2)) return num1 / num2;
+      return NaN;
+    };
+    const multiply = (num1, num2) => {
+      if (verifyNums(num1, num2)) return num1 * num2;
+      return NaN;
+    };
 
     return { add, subtract, divide, multiply };
   };
