@@ -76,7 +76,10 @@ const someFunctions = () => {
       // Shift the code value, wrapping at a & z or A & Z
       if (code >= 97 && code <= 122) {
         char = String.fromCharCode(((code - 97 + shift) % 26) + 97);
+      } else if (code >= 65 && code <= 90) {
+        char = String.fromCharCode(((code - 65 + shift) % 26) + 65);
       }
+
       result += char;
     }
 
