@@ -109,4 +109,12 @@ describe("caesarCipher", () => {
   test("works with lowercase or capitals", () => {
     expect(someFunctions().caesarCipher("aBcD", 2)).toBe("cDeF");
   });
+
+  test("wraps letters when coming to z back to a", () => {
+    expect(someFunctions().caesarCipher("xyzXYZ", 2)).toBe("zabZAB");
+  });
+
+  test("other characters shouldn't be affected", () => {
+    expect(someFunctions().caesarCipher("x!y#z$", 2)).toBe("z!a#b$");
+  });
 });
