@@ -15,7 +15,21 @@ const someFunctions = () => {
     return capitalizedString;
   };
 
-  return { capitalize };
+  // Take string and reverse it
+  const reverseString = (string) => {
+    // Return empty string if passed one
+    if (string === "") return "";
+    // Return undefined if string otherwise falsy
+    if (!string) return undefined;
+    if (typeof string !== "string") return undefined;
+    // Create an array from the string
+    const stringArray = string.split();
+    const reverseArray = stringArray.reverse();
+    const reversedString = reverseArray.join("");
+    return reversedString;
+  };
+
+  return { capitalize, reverseString };
 };
 
 export default someFunctions;

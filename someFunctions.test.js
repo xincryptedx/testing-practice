@@ -1,6 +1,6 @@
 import someFunctions from "./someFunctions";
 
-// Capitalize tests
+// capitalize tests
 // Basic functionality
 test("capitalize should return a string with first character capitalized", () => {
   expect(someFunctions().capitalize("string")).toBe("String");
@@ -25,4 +25,10 @@ test("passing null returns undefined", () => {
 
 test("passing value other than string returns undefined", () => {
   expect(someFunctions().capitalize(57)).toBeUndefined();
+});
+
+// reverseString tests
+// Functionality
+test("passed string should be returned in reversed order", () => {
+  expect(someFunctions().reverseString("abcd")).toBe("dcba");
 });
