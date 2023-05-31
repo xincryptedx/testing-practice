@@ -65,6 +65,22 @@ const someFunctions = () => {
   const caesarCipher = (string, shift) => {
     // Creat a copy of the string as an array
     const strArray = string.split("");
+    // Create result to build and return
+    let result = "";
+    // Iterate through that array and shift the character code value
+    for (let i = 0; i < strArray.length; i += 1) {
+      // Get current character and its UTF-16 value
+      let char = strArray[i];
+      const code = string.charCodeAt(i);
+
+      // Shift the code value, wrapping at a & z or A & Z
+      if (code >= 97 && code <= 122) {
+        char = String.fromCharCode(((code - 97 + shift) % 26) + 97);
+      }
+      result += char;
+    }
+
+    return result;
   };
 
   return { capitalize, reverseString, calculator, caesarCipher };

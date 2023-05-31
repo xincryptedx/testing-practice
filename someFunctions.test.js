@@ -105,4 +105,8 @@ describe("caesarCipher", () => {
   test("passed string returned shifted by shift factor", () => {
     expect(someFunctions().caesarCipher("abcd", 2)).toBe("cdef");
   });
+
+  test("works with lowercase or capitals", () => {
+    expect(someFunctions().caesarCipher("aBcD", 2)).toBe("cDeF");
+  });
 });
