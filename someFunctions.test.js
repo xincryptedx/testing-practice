@@ -99,3 +99,10 @@ describe("calculator", () => {
     expect(someFunctions().calculator().add(2, true)).toBe(NaN);
   });
 });
+
+describe("caesarCipher", () => {
+  // Functionality
+  test("passed string returned shifted by shift factor", () => {
+    expect(someFunctions().caeserCipher("abcd", 2)).toBe("cdef");
+  });
+});
