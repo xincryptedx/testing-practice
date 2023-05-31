@@ -144,6 +144,10 @@ describe("caesarCipher", () => {
     expect(someFunctions().caesarCipher("efg", null)).toBeUndefined();
   });
 
+  test("passing bool for shift will return undefined", () => {
+    expect(someFunctions().caesarCipher("abc", true)).toBeUndefined();
+  });
+
   test("passing number for string will return undefined", () => {
     expect(someFunctions().caesarCipher(5, 3)).toBeUndefined();
   });
@@ -154,5 +158,9 @@ describe("caesarCipher", () => {
 
   test("passing null for string will return undefined", () => {
     expect(someFunctions().caesarCipher(null, 5)).toBeUndefined();
+  });
+
+  test("passing bool for string will return undefined", () => {
+    expect(someFunctions().caesarCipher(false, 5)).toBeUndefined();
   });
 });
