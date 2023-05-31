@@ -90,12 +90,40 @@ const someFunctions = () => {
   };
 
   const analyzeArray = (arrToAnalyze) => {
+    // Validate that arrToAnalyze is an array
+    if (!Array.isArray(arrToAnalyze)) return undefined;
+    // Remove non number values
+    const arr = [...arrToAnalyze];
+    // Create results object
     const results = {
       average: null,
       min: null,
       max: null,
       length: null,
     };
+
+    // Set results length
+    results.length = arr.length;
+
+    // Get sum of values
+    const sum = arr.reduce(
+      (accumulator, currentValue) => accumulator + currentValue
+    );
+
+    // Set results average
+    results.average = sum / results.length;
+
+    // Set results max
+    results.max = arr.reduce((accumulator, currentValue) => {
+      if (currentValue > accumulator) return currentValue;
+      return accumulator;
+    });
+
+    // Set results min
+    results.min = arr.reduce((accumulator, currentValue) => {
+      if (currentValue <= accumulator) return currentValue;
+      return accumulator;
+    });
 
     return results;
   };

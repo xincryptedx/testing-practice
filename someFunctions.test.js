@@ -166,7 +166,7 @@ describe("caesarCipher", () => {
 describe("analyzeArray", () => {
   // Functionality
   test("takes an array of numbers and returns {average, min, max, length}.", () => {
-    expect(someFunctions().analyzeArray([1, 8, 3, 4, 2, 6])).toBe({
+    expect(someFunctions().analyzeArray([1, 8, 3, 4, 2, 6])).toEqual({
       average: 4,
       min: 1,
       max: 8,
