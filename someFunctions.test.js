@@ -69,4 +69,16 @@ describe("calculator", () => {
   test("add should correctly add two numbers", () => {
     expect(someFunctions().calculator().add(2, 2)).toBe(4);
   });
+
+  test("subtract should correctly subtract two numbers", () => {
+    expect(someFunctions().calculator().subtract(4, 1)).toBe(3);
+  });
+
+  test("divide should correctly divide two numbers", () => {
+    expect(someFunctions().calculator().divide(10, 2)).toBe(5);
+  });
+
+  test("multiply should correctly multiply two numbers", () => {
+    expect(someFunctions().calculator().multiply(2, 3)).toBe(6);
+  });
 });
