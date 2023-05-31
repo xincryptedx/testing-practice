@@ -1,7 +1,7 @@
 import someFunctions from "./someFunctions";
 
 // capitalize tests
-describe("capitalize", () => {
+describe("caapitalize", () => {
   // Basic functionality
   test("capitalize should return a string with first character capitalized", () => {
     expect(someFunctions().capitalize("string")).toBe("String");

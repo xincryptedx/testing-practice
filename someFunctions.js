@@ -23,7 +23,7 @@ const someFunctions = () => {
     if (!string) return undefined;
     if (typeof string !== "string") return undefined;
     // Create an array from the string
-    const stringArray = string.split();
+    const stringArray = string.split("");
     const reverseArray = stringArray.reverse();
     const reversedString = reverseArray.join("");
     return reversedString;
