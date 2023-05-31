@@ -88,14 +88,14 @@ describe("calculator", () => {
   });
 
   test("passing null returns NaN", () => {
-    expect(someFunctions().calculator().multiply(2, null)).toBe(NaN);
+    expect(someFunctions().calculator().divide(2, null)).toBe(NaN);
   });
 
   test("passing string returns NaN", () => {
-    expect(someFunctions().calculator().multiply(2, "4")).toBe(NaN);
+    expect(someFunctions().calculator().subtract(2, "4")).toBe(NaN);
   });
 
   test("passing bool returns NaN", () => {
-    expect(someFunctions().calculator().multiply(2, true)).toBe(NaN);
+    expect(someFunctions().calculator().add(2, true)).toBe(NaN);
   });
 });
