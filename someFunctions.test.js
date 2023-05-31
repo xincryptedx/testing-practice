@@ -1,6 +1,5 @@
 import someFunctions from "./someFunctions";
 
-// capitalize tests
 describe("caapitalize", () => {
   // Functionality
   test("capitalize should return a string with first character capitalized", () => {
@@ -30,7 +29,6 @@ describe("caapitalize", () => {
   });
 });
 
-// reverseString tests
 describe("reverseString", () => {
   // Functionality
   test("passed string should be returned in reversed order", () => {
@@ -162,5 +160,17 @@ describe("caesarCipher", () => {
 
   test("passing bool for string will return undefined", () => {
     expect(someFunctions().caesarCipher(false, 5)).toBeUndefined();
+  });
+});
+
+describe("analyzeArray", () => {
+  // Functionality
+  test("takes an array of numbers and returns {average, min, max, length}.", () => {
+    expect(someFunctions().analyzeArray([1, 8, 3, 4, 2, 6])).toBe({
+      average: 4,
+      min: 1,
+      max: 8,
+      length: 6,
+    });
   });
 });
