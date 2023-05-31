@@ -127,12 +127,20 @@ describe("caesarCipher", () => {
     expect(someFunctions().caesarCipher("xyz", 2602)).toBe("zab");
   });
 
-  // Errors
   test("passing float for shift will trim the decimal value", () => {
     expect(someFunctions().caesarCipher("efg", 2.999999999)).toBe("ghi");
   });
 
+  // Errors
   test("passing string for shift will return undefined", () => {
     expect(someFunctions().caesarCipher("efg", "2")).toBeUndefined();
+  });
+
+  test("passing undefined for shift will return undefined", () => {
+    expect(someFunctions().caesarCipher("efg", undefined)).toBeUndefined();
+  });
+
+  test("passing null for shift will return undefined", () => {
+    expect(someFunctions().caesarCipher("efg", null)).toBeUndefined();
   });
 });
