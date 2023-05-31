@@ -202,4 +202,21 @@ describe("analyzeArray", () => {
       length: 6,
     });
   });
+
+  // Errors
+  test("empty array should return undefined", () => {
+    expect(someFunctions().analyzeArray([])).toBeUndefined();
+  });
+
+  test("null arrayToAnalyze should return undefined", () => {
+    expect(someFunctions().analyzeArray(null)).toBeUndefined();
+  });
+
+  test("undefined arrayToAnalyze should return undefined", () => {
+    expect(someFunctions().analyzeArray(undefined)).toBeUndefined();
+  });
+
+  test("non array params for arrayToAnalyze should return undefined", () => {
+    expect(someFunctions().analyzeArray(54)).toBeUndefined();
+  });
 });

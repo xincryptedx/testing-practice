@@ -90,8 +90,9 @@ const someFunctions = () => {
   };
 
   const analyzeArray = (arrToAnalyze) => {
-    // Validate that arrToAnalyze is an array
+    // Validate that arrToAnalyze is an array and not empty
     if (!Array.isArray(arrToAnalyze)) return undefined;
+    if (arrToAnalyze.length === 0) return undefined;
     // Remove non number values
     const arr = arrToAnalyze.filter(
       (element) => typeof element === "number" && !Number.isNaN(element)
