@@ -165,8 +165,37 @@ describe("caesarCipher", () => {
 
 describe("analyzeArray", () => {
   // Functionality
-  test("takes an array of numbers and returns {average, min, max, length}.", () => {
+  test("takes an array of numbers and returns results object", () => {
     expect(someFunctions().analyzeArray([1, 8, 3, 4, 2, 6])).toEqual({
+      average: 4,
+      min: 1,
+      max: 8,
+      length: 6,
+    });
+  });
+
+  test("average works with floats", () => {
+    expect(
+      someFunctions().analyzeArray([1.5, 8.5, 3.5, 4.5, 2.5, 6.555]).average
+    ).toBeCloseTo(4.5091);
+  });
+
+  test("only numbers are considered with other values discarded", () => {
+    expect(
+      someFunctions().analyzeArray([
+        1,
+        null,
+        8,
+        "a string!",
+        3,
+        true,
+        4,
+        false,
+        2,
+        undefined,
+        6,
+      ])
+    ).toEqual({
       average: 4,
       min: 1,
       max: 8,
