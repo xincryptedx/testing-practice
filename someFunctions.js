@@ -89,7 +89,18 @@ const someFunctions = () => {
     return result;
   };
 
-  return { capitalize, reverseString, calculator, caesarCipher };
+  const analyzeArray = (arrToAnalyze) => {
+    const results = {
+      average: null,
+      min: null,
+      max: null,
+      length: null,
+    };
+
+    return results;
+  };
+
+  return { capitalize, reverseString, calculator, caesarCipher, analyzeArray };
 };
 
 export default someFunctions;
