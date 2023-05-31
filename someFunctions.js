@@ -93,7 +93,9 @@ const someFunctions = () => {
     // Validate that arrToAnalyze is an array
     if (!Array.isArray(arrToAnalyze)) return undefined;
     // Remove non number values
-    const arr = [...arrToAnalyze];
+    const arr = arrToAnalyze.filter(
+      (element) => typeof element === "number" && !Number.isNaN(element)
+    );
     // Create results object
     const results = {
       average: null,
